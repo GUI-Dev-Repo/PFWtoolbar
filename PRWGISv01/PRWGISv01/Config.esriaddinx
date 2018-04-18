@@ -1,0 +1,37 @@
+﻿<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>PRWGISv01</Name>
+  <AddInID>{5343d855-907f-4aae-9c93-5fada72b23f8}</AddInID>
+  <Description>Toolbar writtern for Partners for Fish and Wildlife. Toolbar executes in ArcGIS 10.4.1-10.5.1, using C#. </Description>
+  <Version>1.0</Version>
+  <Image>Images\PRWGISv01.png</Image>
+  <Author>Windy Fischer-Cherenzia</Author>
+  <Company>Geospatial Urban Interface, LLC</Company>
+  <Date>4/1/2018</Date>
+  <Targets>
+    <Target name="Desktop" version="10.5" />
+  </Targets>
+  <AddIn language="CLR" library="PRWGISv01.dll" namespace="PRWGISv01">
+    <ArcMap>
+      <Commands>
+        <Button id="Geospatial_Urban_Interface_PRWGISv01_btnPDF" class="btnPDF" message="PFW Data Dictionary" caption="PFW Data Dictionary" tip="PFW Data Dictionary" category="Add-In Controls" image="Images\btnPDF.png" />
+        <Button id="Geospatial_Urban_Interface_PRWGISv01_addData" class="addData" message="Add Data" caption="Add Data" tip="Add Data" category="Add-In Controls" image="Images\addData.png" />
+        <Button id="Geospatial_Urban_Interface_PRWGISv01_attEdit" class="attEdit" message="Attribute Editor" caption="Attribute Editor" tip="Attribute Editor" category="Add-In Controls" image="Images\attEdit.png" />
+        <Button id="Geospatial_Urban_Interface_PRWGISv01_listEdit" class="listEdit" message="List Editor" caption="List Editor" tip="List Editor" category="Add-In Controls" image="Images\listEdit.png" />
+        <Button id="Geospatial_Urban_Interface_PRWGISv01_btnPref" class="btnPref" message="Preferences" caption="Preferences" tip="Preferences" category="Add-In Controls" image="Images\btnPref.png" />
+        <Button id="Geospatial_Urban_Interface_PRWGISv01_btnAbout" class="btnAbout" message="About" caption="About" tip="About" category="Add-In Controls" image="Images\btnAbout.png" />        
+      </Commands>
+      <Toolbars>
+        <Toolbar id="Geospatial_Urban_Interface_PRWGISv01_PFWGIS" caption="PFWGIS" showInitially="true">
+          <Items>
+            <Button refID="Geospatial_Urban_Interface_PRWGISv01_addData" />
+            <Button refID="Geospatial_Urban_Interface_PRWGISv01_attEdit" />
+            <Button refID="Geospatial_Urban_Interface_PRWGISv01_listEdit" />
+            <Button refID="Geospatial_Urban_Interface_PRWGISv01_btnPref" />
+            <Button refID="Geospatial_Urban_Interface_PRWGISv01_btnPDF" />
+            <Button refID="Geospatial_Urban_Interface_PRWGISv01_btnAbout" />
+          </Items>
+        </Toolbar>
+      </Toolbars>
+    </ArcMap>
+  </AddIn>
+</ESRI.Configuration>
